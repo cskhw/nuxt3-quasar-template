@@ -21,12 +21,18 @@ export default defineNuxtConfig({
   typescript: {
     shim: false,
   },
-  css: ["~/assets/css/main.scss"],
   vite: {
     resolve: {
       alias: {
         "@": `${path.resolve(__dirname, "src")}`,
       },
     },
+  },
+  css: ["~/assets/css/main.scss"],
+  runtimeConfig: {
+    // The private keys which are only available within server-side
+    // apiSecret: "123",
+    // Keys within public, will be also exposed to the client-side
+    public: {},
   },
 });
