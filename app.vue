@@ -8,7 +8,6 @@
 </template>
 <script setup lang="ts"></script>
 <style lang="scss">
-@import "~/assets/stylesheets/main.scss";
 .page-enter-active,
 .page-leave-active {
   transition: all 0.4s;

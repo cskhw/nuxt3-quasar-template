@@ -11,6 +11,9 @@
     "nuxt": "3.0.0-rc.13"
   },
   "dependencies": {
+    "@pinia/nuxt": "^0.4.3",
+    "@quasar/vite-plugin": "^1.2.3",
+    "pinia": "^2.0.23",
     "sass": "^1.56.0",
     "sass-loader": "^13.1.0",
     "yarn": "^1.22.19"
