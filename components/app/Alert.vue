@@ -1,5 +1,5 @@
 <template>
-  <div class="app-footer">appfooter</div>
+  <div class="app-alert"></div>
 </template>
 <script setup lang="ts"></script>
 <style lang="scss" scoped></style>

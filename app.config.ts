@@ -1,5 +1,5 @@
 export default defineAppConfig({
-  title: "Hello Nuxt",
+  title: "Nuxt3-quasar-template",
   theme: {
     dark: false,
     colors: {

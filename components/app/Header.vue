@@ -1,7 +1,5 @@
 <template>
-  <div class="app-footer">Header</div>
+  <div class="app-header">appheader</div>
 </template>
-
 <script setup lang="ts"></script>
-
-<style lang="scss"></style>
+<style lang="scss" scoped></style>
