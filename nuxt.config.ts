@@ -25,14 +25,13 @@ export default defineNuxtConfig({
     resolve: {
       alias: {
         "@": `${path.resolve(__dirname, "")}`,
+        // solved vue-i18n esm-build warn
+        "vue-i18n": "vue-i18n/dist/vue-i18n.cjs.js",
       },
     },
   },
   css: ["~/assets/css/main.scss"],
   runtimeConfig: {
-    // The private keys which are only available within server-side
-    // apiSecret: "123",
-    // Keys within public, will be also exposed to the client-side
     public: {},
   },
 });

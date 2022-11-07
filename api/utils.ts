@@ -7,7 +7,6 @@ export function getBaseUrl(): string {
     const prefix = config.VITE_PREFIX_URL;
     // const subfix = config.VITE_SUBFIX_URL;
     const baseURL = (prefix as string) + mode;
-    console.log(baseURL);
     return baseURL;
   } catch (e) {
     console.log(e);

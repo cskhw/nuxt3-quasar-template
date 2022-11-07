@@ -1,11 +1,11 @@
-// /// <reference types="vite/client" />
+/// <reference types="vite/client" />
 
-// // Env
-// interface ImportMetaEnv {
-//   NUXT_MODE: string;
-//   NUXT_API_SECRET: string;
-// }
+// Env
+interface ImportMetaEnv {
+  VITE_MODE: string;
+  VITE_PREFIX_URL: string;
+}
 
-// interface ImportMeta {
-//   readonly env: ImportMetaEnv;
-// }
+interface ImportMeta {
+  readonly env: ImportMetaEnv;
+}
