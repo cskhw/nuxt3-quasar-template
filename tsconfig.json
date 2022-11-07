@@ -1,0 +1,27 @@
+{
+  // https://v3.nuxtjs.org/concepts/typescript
+  "extends": "./.nuxt/tsconfig.json",
+  "include": [
+    "env.d.ts",
+    "shim-vue.d.ts",
+    "types/main.d.ts",
+    "src/**/*",
+    "src/**/*.vue",
+    "package.json"
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    // allow json
+    "composite": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    // library build options
+    "noEmit": true,
+    "declaration": true,
+    "declarationMap": true,
+    "declarationDir": "./types"
+  }
+}
