@@ -92,7 +92,7 @@ export const errorMessages: errorMessageType = {
     ZH: "Bad Request",
   },
   404: {
-    KO: "등록되지 않은 이메일입니다.",
+    KO: "요청을 찾을 수 없습니다.",
     EN: "Not Found",
     JA: "Not Found",
     ZH: "Not Found",

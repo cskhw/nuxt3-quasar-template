@@ -1,5 +1,5 @@
 import { PiniaPlugin, PiniaPluginContext } from "pinia";
-import router from "vue-router";
+import api from "~/api/api";
 
 function MyPiniaPlugin({ store }: PiniaPluginContext) {
   store.$subscribe((mutation) => {
@@ -15,6 +15,7 @@ function MyPiniaPlugin({ store }: PiniaPluginContext) {
 export default defineNuxtPlugin(({ $pinia }) => {
   $pinia.use(({ store }: PiniaPlugin & { store: any }) => {
     store.router = markRaw(router);
+    store.api = markRaw(api);
   });
   $pinia.use(MyPiniaPlugin);
 });

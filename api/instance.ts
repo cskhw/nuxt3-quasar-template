@@ -1,12 +1,10 @@
 import axios, { type AxiosRequestConfig, type AxiosResponse } from "axios";
 
-import { HTTP_REQUEST_TIMEOUT } from "@/utils/common";
 import { getBaseUrl } from "@/api/utils";
 import { extractError } from "./error";
 
 const axiosInstance = axios.create({
-  baseURL: getBaseUrl(),
-  timeout: HTTP_REQUEST_TIMEOUT,
+  baseURL: "http://localhost:80" + getBaseUrl(),
 });
 
 // 요청 인터셉터

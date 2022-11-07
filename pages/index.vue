@@ -1,17 +1,22 @@
 <template>
-  <div>
-    hello world
-    <!-- some content -->
-    <NuxtErrorBoundary @error="someErrorLogger">
-      <!-- You use the default slot to render your content -->
-      <template #error="{ error }">
-        You can display the error locally here.
-        <button @click="error = null">This will clear the error.</button>
-      </template>
-    </NuxtErrorBoundary>
+  <div id="main">
+    <h1>main page</h1>
+    <button @click="onClickLoginBtn">google</button>
+    <button>test</button>
   </div>
 </template>
 <script setup lang="ts">
-const someErrorLogger = () => {};
+import api from "@/api/api";
+import { asyncDebounce } from "@/utils/asyncDebounce";
+
+const onClickLoginBtn = asyncDebounce(login);
+async function login() {
+  console.log("login");
+  const response = await api.auth.login({
+    email: "gusdn0828@gmail.com",
+    password: "test1234!",
+  });
+  console.log(response);
+}
 </script>
 <style lang="scss"></style>
