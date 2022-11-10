@@ -1,5 +1,6 @@
 import path from "path";
 import { quasar } from "@quasar/vite-plugin";
+import vue from "@vitejs/plugin-vue";
 
 const appEnv = process.env.MODE || "dev";
 
@@ -13,6 +14,9 @@ export default defineNuxtConfig({
     "@quasar/extras/material-icons/material-icons.css",
     "~/assets/styles/quasar.sass",
   ],
+  build: {
+    transpile: ["quasar"],
+  },
   modules: [
     // ...
     [
@@ -26,6 +30,14 @@ export default defineNuxtConfig({
     ],
   ],
   vite: {
+    define: {
+      "process.env.DEBUG": false,
+    },
+    plugins: [
+      quasar({
+        sassVariables: "assets/styles/quasar.variables.sass",
+      }),
+    ],
     resolve: {
       alias: {
         "@": `${path.resolve(__dirname, "")}`,
