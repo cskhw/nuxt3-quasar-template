@@ -1,5 +1,6 @@
 <template>
   <div id="main">
+    <div><q-btn @click="$router.push('contact-us')">테스트 폼</q-btn></div>
     <h1>main page</h1>
     <button @click="onClickLoginBtn">google</button>
     <button>test</button>

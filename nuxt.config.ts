@@ -1,11 +1,9 @@
 import path from "path";
 import { quasar } from "@quasar/vite-plugin";
-import vue from "@vitejs/plugin-vue";
-
-const appEnv = process.env.MODE || "dev";
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
+  ssr: false,
   typescript: {
     shim: false,
   },

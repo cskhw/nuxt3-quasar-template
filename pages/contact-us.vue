@@ -9,7 +9,6 @@
         filled
         label="Name *"
         :disable="busy"
-        :rules="[required('name')]"
         lazy-rules="ondemand"
       >
       </q-input>
