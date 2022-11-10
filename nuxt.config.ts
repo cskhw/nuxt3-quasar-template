@@ -1,11 +1,18 @@
 import path from "path";
+import { quasar } from "@quasar/vite-plugin";
+
 const appEnv = process.env.MODE || "dev";
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  app: {
-    pageTransition: { name: "page", mode: "out-in" },
+  typescript: {
+    shim: false,
   },
+  css: [
+    "~/assets/styles/main.scss",
+    "@quasar/extras/material-icons/material-icons.css",
+    "~/assets/styles/quasar.sass",
+  ],
   modules: [
     // ...
     [
@@ -18,9 +25,6 @@ export default defineNuxtConfig({
       },
     ],
   ],
-  typescript: {
-    shim: false,
-  },
   vite: {
     resolve: {
       alias: {
@@ -30,7 +34,9 @@ export default defineNuxtConfig({
       },
     },
   },
-  css: ["~/assets/css/main.scss"],
+  app: {
+    pageTransition: { name: "page", mode: "out-in" },
+  },
   runtimeConfig: {
     public: {},
   },
