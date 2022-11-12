@@ -1,8 +1,9 @@
 <template>
   <!-- GlobalError -->
   <NuxtErrorBoundary @error="GlobalErrorLogger">
+    <!-- You use the default slot to render your content -->
     <QLayout view="hhh lpr fff">
-      <!-- You use the default slot to render your content -->
+      <!-- BEGIN: HEADER -->
       <QHeader height-hint="20"
         ><QToolbar>
           <!-- Menu Btn -->
@@ -18,8 +19,13 @@
           >오더히어로</QToolbar
         >
       </QHeader>
+      <!-- END: HEADER -->
+      <!-- BEGIN: PAGE -->
       <NuxtPage />
+      <!-- END: PAGE -->
+      <!-- BEGIN: FOOTER -->
       <AppFooter />
+      <!-- END: FOOTER -->
       <template #error="{ error }">
         You can display the error locally here.
         <button @click="error = null">This will clear the error.</button>
@@ -28,6 +34,10 @@
   </NuxtErrorBoundary>
 </template>
 <script setup lang="ts">
+definePageMeta({
+  title: "test",
+});
+
 const drawerState = ref(false);
 
 const GlobalErrorLogger = (e: any) => {

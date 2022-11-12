@@ -1,15 +1,33 @@
 <template>
-  <div id="main">
-    <div><q-btn @click="$router.push('contact-us')">테스트 폼</q-btn></div>
-    <h1>main page</h1>
-    <button @click="onClickLoginBtn">google</button>
-    <button>test</button>
-  </div>
+  <QPageContainer>
+    <QPage padding>
+      {{ counter }}
+      {{ show }}
+      <Transition
+        appear
+        enter-active-class="animated flash"
+        leave-active-class="animated flash"
+      >
+        <QCard v-show="show"> test </QCard>
+      </Transition>
+      <QBtn
+        transition-show="jump-down"
+        transition-hide="jump-up"
+        @click="show = !show"
+        color="secondary"
+        icon="mail"
+        label="Email"
+      />
+    </QPage>
+  </QPageContainer>
 </template>
 <script setup lang="ts">
 import api from "@/api/api";
 import { asyncDebounce } from "@/utils/asyncDebounce";
 const env = useRuntimeConfig().public;
+const counter = ref(0);
+const show = ref(false);
+
 const date = new Date();
 date.setHours(date.getHours() + 3);
 const atCookie = useCookie("at", { expires: date });

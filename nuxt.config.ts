@@ -18,12 +18,12 @@ export default defineNuxtConfig({
     "~/assets/styles/main.scss",
     "@quasar/extras/material-icons/material-icons.css",
     "~/assets/styles/quasar.sass",
+    "~/assets/css/animate.compat.css",
   ],
   build: {
     transpile: ["quasar"],
   },
   modules: [
-    // ...
     [
       "@pinia/nuxt",
       {
@@ -53,7 +53,7 @@ export default defineNuxtConfig({
       },
     },
   },
-  // 앱 설정
+  // 앱 메타데이터 설정
   app: {
     // pageTransition: { name: "page", mode: "out-in" },
   },
