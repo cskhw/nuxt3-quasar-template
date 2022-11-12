@@ -55,7 +55,7 @@ export default defineNuxtConfig({
   },
   // 앱 설정
   app: {
-    pageTransition: { name: "page", mode: "out-in" },
+    // pageTransition: { name: "page", mode: "out-in" },
   },
   // 환경 변수
   runtimeConfig: {

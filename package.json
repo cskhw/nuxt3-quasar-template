@@ -14,6 +14,7 @@
     "nuxt": "3.0.0-rc.13"
   },
   "dependencies": {
+    "@mdi/js": "^7.0.96",
     "axios": "^1.1.3",
     "dotenv": "^16.0.3",
     "pinia": "^2.0.23",

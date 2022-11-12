@@ -1,30 +1,34 @@
 <template>
-  <div id="app">
-    Header
-    <AppHeader />
-    <!-- IndexPage -->
-    <NuxtPage />
-    <!-- Footer -->
-    <AppFooter />
-    <div>
-      <QInput v-model="data"> </QInput>
-      {{ data }}
-
-      <QBtn @click="data = cookies.get('at')"> 쿠키 세팅 </QBtn>
-      testQBtn
-    </div>
-    <!-- GlobalError -->
-    <NuxtErrorBoundary @error="GlobalErrorLogger">
+  <!-- GlobalError -->
+  <NuxtErrorBoundary @error="GlobalErrorLogger">
+    <QLayout view="hhh lpr fff">
       <!-- You use the default slot to render your content -->
+      <QHeader height-hint="20"
+        ><QToolbar>
+          <!-- Menu Btn -->
+          <QBtn
+            @click="drawerState = !drawerState"
+            class="q-ma-sm"
+            icon="menu"
+            flat
+            round
+            dense
+            :ripple="false"
+          ></QBtn
+          >오더히어로</QToolbar
+        >
+      </QHeader>
+      <NuxtPage />
+      <AppFooter />
       <template #error="{ error }">
         You can display the error locally here.
         <button @click="error = null">This will clear the error.</button>
       </template>
-    </NuxtErrorBoundary>
-  </div>
+    </QLayout>
+  </NuxtErrorBoundary>
 </template>
 <script setup lang="ts">
-const data = ref("testtest");
+const drawerState = ref(false);
 
 const GlobalErrorLogger = (e: any) => {
   console.log(e);
