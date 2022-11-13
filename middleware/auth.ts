@@ -1,4 +1,4 @@
-import userStore from "@/stores/userStore";
+import userStore from "@/stores/useUserStore";
 import { routerKey } from "vue-router";
 
 // https://v3.nuxtjs.org/guide/directory-structure/middleware/

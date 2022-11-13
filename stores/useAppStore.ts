@@ -1,15 +1,13 @@
-import { IUser } from "@/types/stores/userStore";
 import { defineStore } from "pinia";
 
-export default defineStore("user", {
+export default defineStore("app", {
   state: () => ({
     isLoading: false,
     isAuth: false,
-    user: {} as IUser,
+    layout: "app",
   }),
   getters: {
     loading: (state) => {
-      const config = useRuntimeConfig();
       return state.isLoading;
     },
   },
@@ -21,4 +19,4 @@ export default defineStore("user", {
       this.isLoading = false;
     },
   },
-})();
+});

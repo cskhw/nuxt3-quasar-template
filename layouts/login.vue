@@ -4,14 +4,24 @@
     height-hint="20"
     color="white"
   >
-    <QToolbar>
-      <QToolbarTitle> 오더히어로 </QToolbarTitle>
-      <QBtn color="grey" round flat :icon="mdiBell"> </QBtn>
-      <QBtn color="grey" round flat :icon="mdiCart"> </QBtn>
+    <QToolbar class="row">
+      <QBtn
+        color="black"
+        :icon="mdiChevronLeft"
+        flat
+        round
+        @click="$router.go(-1)"
+      >
+      </QBtn>
+      <QToolbarTitle class="font-size-16 vertical-center">
+        로그인
+      </QToolbarTitle>
     </QToolbar>
   </QHeader>
   <slot />
   <QFooter> im footer </QFooter>
 </template>
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { mdiChevronLeft } from "@mdi/js";
+</script>
 <style lang="scss"></style>

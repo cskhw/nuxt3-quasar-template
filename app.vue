@@ -3,7 +3,7 @@
   <NuxtErrorBoundary @error="GlobalErrorLogger">
     <!-- You use the default slot to render your content -->
     <QLayout view="hhh lpr fff">
-      <NuxtLayout>
+      <NuxtLayout :name="appStore.layout">
         <NuxtPage />
       </NuxtLayout>
     </QLayout>
@@ -14,11 +14,13 @@
   </NuxtErrorBoundary>
 </template>
 <script setup lang="ts">
-definePageMeta({
-  title: "test",
-});
+import useAppStore from "@/stores/useAppStore";
 
-const drawerState = ref(false);
+const appStore = useAppStore();
+
+definePageMeta({
+  middleware: "global",
+});
 
 const GlobalErrorLogger = (e: any) => {
   console.log(e);
