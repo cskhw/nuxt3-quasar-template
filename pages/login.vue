@@ -47,6 +47,7 @@
           class="q-mt-md full-width bg-light-blue text-white text-weight-bolder"
           flat
           size="1rem"
+          @click="$router.push('/')"
           >로그인</QBtn
         >
 
