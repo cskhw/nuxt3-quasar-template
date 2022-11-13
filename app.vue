@@ -3,19 +3,9 @@
   <NuxtErrorBoundary @error="GlobalErrorLogger">
     <!-- You use the default slot to render your content -->
     <QLayout view="hhh lpr fff">
-      <QHeader
-        class="row justify-between bg-white text-black"
-        height-hint="20"
-        color="white"
-      >
-        <QToolbar>
-          <QToolbarTitle> 오더히어로 </QToolbarTitle>
-          <QBtn color="grey" round flat :icon="mdiBell"> </QBtn>
-          <QBtn color="grey" round flat :icon="mdiCart"> </QBtn>
-        </QToolbar>
-      </QHeader>
-      <NuxtPage />
-      <QFooter> im footer </QFooter>
+      <NuxtLayout>
+        <NuxtPage />
+      </NuxtLayout>
     </QLayout>
     <!-- 글로벌 에러 처리 -->
     <template #error="error">
@@ -24,8 +14,6 @@
   </NuxtErrorBoundary>
 </template>
 <script setup lang="ts">
-import { mdiAlarm, mdiBell, mdiCart } from "@mdi/js";
-
 definePageMeta({
   title: "test",
 });

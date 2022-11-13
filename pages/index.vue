@@ -4,6 +4,7 @@
     <QPage>
       <!-- 홈 고객 정보 배너 -->
       <HomeBanner />
+      <QBtn @click="$router.push('login')">로그인</QBtn>
     </QPage>
   </QPageContainer>
 </template>

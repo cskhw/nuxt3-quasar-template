@@ -1,6 +1,5 @@
 <template>
-  <div class="new-default">
-    hello im new default
+  <div class="login-layout">
     <slot />
   </div>
 </template>
