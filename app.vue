@@ -3,7 +3,6 @@
   <NuxtErrorBoundary @error="GlobalErrorLogger">
     <!-- You use the default slot to render your content -->
     <QLayout view="hhh lpr fff">
-      <!-- BEGIN: HEADER -->
       <QHeader
         class="row justify-between bg-white text-black"
         height-hint="20"
@@ -15,18 +14,12 @@
           <QBtn color="grey" round flat :icon="mdiCart"> </QBtn>
         </QToolbar>
       </QHeader>
-      <!-- END: HEADER -->
-      <!-- BEGIN: PAGE -->
       <NuxtPage />
-      <!-- END: PAGE -->
-      <!-- BEGIN: FOOTER -->
       <QFooter> im footer </QFooter>
-      <!-- END: FOOTER -->
     </QLayout>
     <!-- 글로벌 에러 처리 -->
-    <template #error="{ error }">
-      You can display the error locally here.
-      <button @click="error = null">This will clear the error.</button>
+    <template #error="error">
+      <Error :error="error" />
     </template>
   </NuxtErrorBoundary>
 </template>

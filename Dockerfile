@@ -6,8 +6,8 @@ COPY package*.json ./
 
 COPY . /app
 
-RUN npm install --production
+RUN yarn install
 
-CMD [ "npm", "run", "dev"]
+CMD [ "yarn", "dev"]
 
 EXPOSE 3000

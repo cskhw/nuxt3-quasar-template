@@ -42,6 +42,7 @@ export default defineNuxtConfig({
       quasar({
         // quasar sass 변수
         sassVariables: "assets/styles/quasar.variables.sass",
+        autoImportComponentCase: "combined",
       }),
     ],
     resolve: {
