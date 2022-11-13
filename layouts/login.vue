@@ -3,6 +3,7 @@
     class="row justify-between bg-white text-black"
     height-hint="20"
     color="white"
+    bordered
   >
     <QToolbar class="row">
       <QBtn
@@ -13,13 +14,12 @@
         @click="$router.go(-1)"
       >
       </QBtn>
-      <QToolbarTitle class="font-size-16 vertical-center">
+      <QToolbarTitle class="q-pa-none absolute-center font-size-16">
         로그인
       </QToolbarTitle>
     </QToolbar>
   </QHeader>
   <slot />
-  <QFooter> im footer </QFooter>
 </template>
 <script setup lang="ts">
 import { mdiChevronLeft } from "@mdi/js";

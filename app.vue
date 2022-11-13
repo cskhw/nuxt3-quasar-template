@@ -18,10 +18,6 @@ import useAppStore from "@/stores/useAppStore";
 
 const appStore = useAppStore();
 
-definePageMeta({
-  middleware: "global",
-});
-
 const GlobalErrorLogger = (e: any) => {
   console.log(e);
 };
