@@ -4,36 +4,35 @@
     <!-- You use the default slot to render your content -->
     <QLayout view="hhh lpr fff">
       <!-- BEGIN: HEADER -->
-      <QHeader height-hint="20"
-        ><QToolbar>
-          <!-- Menu Btn -->
-          <QBtn
-            @click="drawerState = !drawerState"
-            class="q-ma-sm"
-            icon="menu"
-            flat
-            round
-            dense
-            :ripple="false"
-          ></QBtn
-          >오더히어로</QToolbar
-        >
+      <QHeader
+        class="row justify-between bg-white text-black"
+        height-hint="20"
+        color="white"
+      >
+        <QToolbar>
+          <QToolbarTitle> 오더히어로 </QToolbarTitle>
+          <QBtn color="grey" round flat :icon="mdiBell"> </QBtn>
+          <QBtn color="grey" round flat :icon="mdiCart"> </QBtn>
+        </QToolbar>
       </QHeader>
       <!-- END: HEADER -->
       <!-- BEGIN: PAGE -->
       <NuxtPage />
       <!-- END: PAGE -->
       <!-- BEGIN: FOOTER -->
-      <AppFooter />
+      <QFooter> im footer </QFooter>
       <!-- END: FOOTER -->
-      <template #error="{ error }">
-        You can display the error locally here.
-        <button @click="error = null">This will clear the error.</button>
-      </template>
     </QLayout>
+    <!-- 글로벌 에러 처리 -->
+    <template #error="{ error }">
+      You can display the error locally here.
+      <button @click="error = null">This will clear the error.</button>
+    </template>
   </NuxtErrorBoundary>
 </template>
 <script setup lang="ts">
+import { mdiAlarm, mdiBell, mdiCart } from "@mdi/js";
+
 definePageMeta({
   title: "test",
 });
@@ -55,13 +54,10 @@ const jwt = cookies.get("jwt");
 console.log(at, rt, jwt);
 </script>
 <style lang="scss">
-.page-enter-active,
-.page-leave-active {
-  transition: all 0.4s;
-}
-.page-enter-from,
-.page-leave-to {
-  opacity: 0;
-  filter: blur(1rem);
+.app-header {
+  color: black;
+  background-color: white;
+  .app-toolbar {
+  }
 }
 </style>

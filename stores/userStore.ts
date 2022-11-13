@@ -1,4 +1,4 @@
-import { IUser } from "@/types/userStore";
+import { IUser } from "@/types/stores/userStore";
 import { defineStore } from "pinia";
 
 export default defineStore("user", {

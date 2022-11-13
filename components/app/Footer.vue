@@ -1,5 +1,0 @@
-<template>
-  <div class="app-footer">appfooter</div>
-</template>
-<script setup lang="ts"></script>
-<style lang="scss" scoped></style>
