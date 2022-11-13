@@ -13,7 +13,5 @@
   <slot />
   <QFooter> im footer </QFooter>
 </template>
-<script setup lang="ts">
-import { mdiBell, mdiCart } from "@mdi/js";
-</script>
+<script setup lang="ts"></script>
 <style lang="scss"></style>
