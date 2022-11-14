@@ -6,7 +6,7 @@ export default defineNuxtPlugin(() => {
   addRouteMiddleware(
     "global",
     (to, from) => {
-      console.log(to, from);
+      console.log(to.path, from.path);
       // 로그인 페이지면 login layout 아니면 app 레이아웃
       if (to.path === "/login") appStore.layout = "login";
       else appStore.layout = "app";
