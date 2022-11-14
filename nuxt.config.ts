@@ -10,6 +10,8 @@ export default defineNuxtConfig({
       // "/posts/id값"
     ],
   },
+  // vitest 설정
+  test: true,
   typescript: {
     shim: false,
   },

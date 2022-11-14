@@ -11,15 +11,12 @@ const cookies: Cookies = {
       Cookies.set(name, value, options);
     } else {
       // 옵션 없을 시 기본 옵션
-      console.log("==================", import.meta.env.MODE);
       Cookies.set(name, value, {
         sameSite: "Strict",
+        // 프로덕션일 때만 true
         httpOnly: import.meta.env.MODE === "production",
         secure: true,
       });
-
-      const test = Cookies.get(name);
-      console.log(test);
     }
   },
 };

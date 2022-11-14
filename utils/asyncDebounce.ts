@@ -4,7 +4,7 @@ import { debounce } from "lodash";
  * https://github.com/lodash/lodash/issues/4815
  * */
 
-export const asyncDelay = 300;
+export const asyncDelay = 250;
 export function asyncDebounce<F extends (...args: any[]) => Promise<any>>(
   func: F,
   wait: number = asyncDelay

@@ -5,8 +5,11 @@ interface IHttpError {
    * 클라이언트 에러
    *
    * 400: Bad Request
+   * 401: Unauthorized
+   * 402: Payment Required
+   * 403: Forbidden
    * 404: Not Found
-   * 404: Conflict
+   * 409: Conflict
    * 422: 클라이언트 전송 데이터와 백앤드 스키마 불일치
    * 452: exceed_request, 클라이언트 요청 횟수 초과
    * 453: invalid_verification_request,
@@ -91,6 +94,12 @@ export const errorMessages: errorMessageType = {
     JA: "Bad Request",
     ZH: "Bad Request",
   },
+  401: {
+    KO: "Unauthorized",
+    EN: "Unauthorized",
+    JA: "Unauthorized",
+    ZH: "Unauthorized",
+  },
   404: {
     KO: "요청을 찾을 수 없습니다.",
     EN: "Not Found",
@@ -101,7 +110,7 @@ export const errorMessages: errorMessageType = {
     KO: "이미 존재합니다. 다시 한 번 확인해주세요.",
     EN: "Already exist. Please check the value again.",
     JA: "Already exist. Please check the value again.",
-    ZH: "Not Found",
+    ZH: "Conflict",
   },
   422: {
     KO: "클라이언트 전송 데이터와 백앤드 스키마 (엔티티) 불일치 오류",
