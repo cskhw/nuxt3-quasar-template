@@ -8,10 +8,12 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@nuxt/test-utils-edge": "^3.0.0-rc.14-27802701.2f53495",
     "@pinia/nuxt": "^0.4.3",
     "@quasar/extras": "^1.15.5",
     "@quasar/vite-plugin": "^1.2.3",
-    "nuxt": "3.0.0-rc.13"
+    "nuxt": "3.0.0-rc.13",
+    "vitest": "^0.25.1"
   },
   "dependencies": {
     "@mdi/js": "^7.0.96",
