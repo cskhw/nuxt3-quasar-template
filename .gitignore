@@ -31,3 +31,6 @@ package-lock.json
 
 .ssh
 gitlab
+
+# test
+/coverage
