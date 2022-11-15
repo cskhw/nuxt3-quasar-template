@@ -13,7 +13,7 @@ export default defineConfig({
   resolve: {
     // 경로 alias 설정
     alias: {
-      "@": path.resolve(__dirname, ""),
+      "@": path.resolve(__dirname, "../"),
     },
   },
 });

@@ -6,8 +6,8 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "test": "vitest --ui --config ./vite.config.ts",
-    "coverage": "vitest run --coverage"
+    "test": "vitest --ui --config ./test/vite.config.ts",
+    "coverage": "vitest run --coverage --config ./test/vite.config.ts"
   },
   "devDependencies": {
     "@nuxt/test-utils-edge": "^3.0.0-rc.14-27802701.2f53495",
