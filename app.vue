@@ -1,6 +1,11 @@
 <template>
   <!-- GlobalError -->
   <NuxtErrorBoundary @error="GlobalErrorLogger">
+    <Head
+      ><Title>Nuxt3-quasar-template</Title>
+      <Meta name="viewport" :content="viewportContent"></Meta
+    ></Head>
+
     <!-- You use the default slot to render your content -->
     <QLayout view="hhh lpr fff">
       <NuxtLayout :name="appStore.layout">
@@ -15,6 +20,16 @@
 </template>
 <script setup lang="ts">
 import useAppStore from "@/stores/useAppStore";
+import { useQuasar } from "quasar";
+
+const quasar = useQuasar();
+
+// 디바이스 종류에 따라 viewport 설정
+const viewportContent = computed(() => {
+  if (quasar.platform.is.android)
+    return "width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover";
+  else return "width=device-width, initial-scale=1";
+});
 
 const appStore = useAppStore();
 
