@@ -1,5 +1,7 @@
 import { H3Error } from "h3";
 
+interface LoginResponse {}
+
 export default defineEventHandler(async (event) => {
   const body = await useBody(event);
   const username = body.username;
@@ -11,8 +13,8 @@ export default defineEventHandler(async (event) => {
     return {
       status: 200,
       body: {
-        "access-token": "access-token",
-        "refresh-token": "refresh-token",
+        access_token: "access_token",
+        refresh_token: "refresh_token",
       },
     };
   } else {

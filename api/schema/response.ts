@@ -21,7 +21,7 @@ export interface ValidationError {
  */
 
 export interface LoginResponse {
-  status: string;
+  status: number;
   body: {
     access_token: string;
     refresh_token: string;
