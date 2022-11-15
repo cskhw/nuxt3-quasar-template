@@ -1,5 +1,7 @@
 import { H3Error } from "h3";
 
+interface LoginResponse {}
+
 export default defineEventHandler(async (event) => {
   const body = await useBody(event);
   const username = body.username;

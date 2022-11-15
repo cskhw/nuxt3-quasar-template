@@ -34,9 +34,14 @@ export default defineNuxtConfig({
       },
     ],
   ],
+  // vite 환경
   vite: {
+    root: ".", //Define the root
     // vitest 환경
-    test: {},
+    test: {
+      globals: true,
+      environment: "jsdom",
+    },
     define: {
       "process.env.DEBUG": false,
     },
