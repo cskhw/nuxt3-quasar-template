@@ -1,6 +1,7 @@
-import { it, expect } from "vitest";
-import { word } from "@/server/lib/word";
+import { describe, it, expect } from "vitest";
 
-it("word shold be 4 letters long", () => {
-  expect(word.length).toBe(4);
+describe("pages/index.vue", () => {
+  it("word shold be 4 letters long", () => {
+    expect("word".length).toBe(4);
+  });
 });
