@@ -7,7 +7,8 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "test": "vitest",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage",
+    "test-ui": "vitest --ui"
   },
   "devDependencies": {
     "@nuxt/test-utils-edge": "^3.0.0-rc.14-27802701.2f53495",
@@ -16,7 +17,8 @@
     "@quasar/vite-plugin": "^1.2.3",
     "@vitest/coverage-c8": "^0.25.1",
     "nuxt": "3.0.0-rc.13",
-    "vitest": "^0.25.1"
+    "vitest": "^0.25.1",
+    "@vitest/ui": "^0.25.2"
   },
   "dependencies": {
     "@mdi/js": "^7.0.96",
