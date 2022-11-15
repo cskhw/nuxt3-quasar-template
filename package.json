@@ -1,5 +1,11 @@
 {
-  "private": true,
+  "name": "nuxt3-quasar-template",
+  "version": "1.0.0",
+  "description": "This template is support all platform of frontend. (nuxt3 + quasar + capacitor + docker)",
+  "homepage": "https://github.com/cskhw/nuxt3-quasar-template",
+  "license": "(MIT OR Apache-2.0)",
+  "email": "gusdn0828@gmail.com",
+  "author": "cskhw <gusdn0828@gmail.com> (https://github.com/cskhw/nuxt3-quasar-template)",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
