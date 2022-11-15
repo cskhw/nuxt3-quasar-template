@@ -1,10 +1,9 @@
 import { describe, it, expect } from "vitest";
 import api from "@/api/api";
-import instance from "@/api/instance";
-import type { LoginResponse } from "@/api/schema/response";
 
 describe("pages/index.vue", () => {
   it("choonsik login", async () => {
+    // choonsik으로 로그인 요청
     const res = await api.auth.login({
       username: "choonsik",
       password: "asdf1234!",

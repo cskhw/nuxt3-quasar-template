@@ -1,0 +1,6 @@
+{
+  "appId": "com.unnamed",
+  "appName": "unnamed",
+  "webDir": ".output/public",
+  "bundledWebRuntime": false
+}

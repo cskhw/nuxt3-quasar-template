@@ -34,3 +34,5 @@ gitlab
 
 # test
 /coverage
+/android
+/ios
