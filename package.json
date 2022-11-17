@@ -14,8 +14,8 @@
     "postinstall": "nuxt prepare",
     "test": "vitest --ui --config ./test/vite.config.ts",
     "coverage": "vitest run --coverage --config ./test/vite.config.ts",
-    "ionic:build": "npm run build",
-    "ionic:serve": "npm run dev"
+    "ionic:build": "yarn generate",
+    "ionic:serve": "yarn dev"
   },
   "devDependencies": {
     "@nuxt/test-utils-edge": "^3.0.0-rc.14-27802701.2f53495",
@@ -37,6 +37,7 @@
     "@capacitor/haptics": "4.0.1",
     "@capacitor/keyboard": "4.0.1",
     "@capacitor/status-bar": "4.0.1",
+    "@ionic/cli": "^6.20.4",
     "@ionic/core": "^6.3.6",
     "@ionic/vue": "^6.3.6",
     "@mdi/js": "^7.0.96",
@@ -45,6 +46,7 @@
     "axios": "^1.1.3",
     "dotenv": "^16.0.3",
     "lodash": "^4.17.21",
+    "native-run": "^1.7.1",
     "pinia": "^2.0.23",
     "quasar": "^2.10.1",
     "sass": "1.32.12",
