@@ -1,6 +1,3 @@
-import path from "path";
-import { quasar } from "@quasar/vite-plugin";
-
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   ssr: false,
@@ -34,33 +31,6 @@ export default defineNuxtConfig({
       },
     ],
   ],
-  // vite 환경
-  vite: {
-    root: ".", //Define the root
-    // vitest 환경
-    test: {
-      globals: true,
-      environment: "jsdom",
-    },
-    define: {
-      "process.env.DEBUG": false,
-    },
-    plugins: [
-      quasar({
-        // quasar sass 변수
-        sassVariables: "assets/styles/quasar.variables.sass",
-        autoImportComponentCase: "combined",
-      }),
-    ],
-    resolve: {
-      // 경로 alias 설정
-      alias: {
-        "@": `${path.resolve(__dirname, "")}`,
-        // solved vue-i18n esm-build warn
-        "vue-i18n": "vue-i18n/dist/vue-i18n.cjs.js",
-      },
-    },
-  },
   // 앱 메타데이터 설정
   app: {
     // pageTransition: { name: "page", mode: "out-in" },
