@@ -4,23 +4,16 @@ version: "3.9"
 services:
   vue:
     container_name: vue
-    image: node:lts
-    working_dir: /var/www/html/app/
-    entrypoint: /bin/bash
-    build:
-      context: .
-      dockerfile: Dockerfile
+    build: .
     ports:
       - 3000:3000
-    networks:
-      my-network:
-        aliases:
-          - vue-app
-    volumes:
-      - ./:/var/www/html/app
-    tty: true
     env_file:
       - ./.env
-
-networks:
-  my-network:
+  nginx:
+    container_name: nginx
+    image: nginx:1.15
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - 80:80
+      - 443:443
