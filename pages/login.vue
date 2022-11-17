@@ -75,16 +75,14 @@
 </template>
 <script setup lang="ts">
 import api from "@/api/api";
-import useAppStore from "@/stores/useAppStore";
 import { asyncDebounce } from "@/utils/asyncDebounce";
 
-const appStore = useAppStore();
 const router = useRouter();
 
 const isAutoLogin = ref(false);
 const loginForm = reactive({
-  username: "",
-  password: "",
+  username: "choonsik",
+  password: "asdf1234!",
 });
 
 const onClickLogin = asyncDebounce(login);

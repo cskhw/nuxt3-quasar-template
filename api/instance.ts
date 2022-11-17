@@ -12,6 +12,10 @@ const baseURL = "http://localhost:3000" + getBaseUrl();
 const axiosInstance: AxiosInstance = axios.create({
   baseURL: baseURL,
   timeout: 20000,
+  headers: {
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
+  },
 });
 
 // 요청 인터셉터
@@ -40,6 +44,7 @@ async function authWrapper<
 >(fn: F): Promise<AxiosResponse<any>> {
   let result: any;
   try {
+    console.log(instance.defaults.baseURL);
     result = await fn();
   } catch (e) {
     console.log(e);
@@ -57,6 +62,7 @@ const instance = {
     url: string,
     config?: AxiosRequestConfig | undefined
   ): Promise<AxiosResponse<any>> {
+    console.log(instance.defaults.baseURL + url);
     return authWrapper(() => axiosInstance.get(url, config));
   },
 
@@ -74,6 +80,7 @@ const instance = {
     data?: any,
     config?: AxiosRequestConfig | undefined
   ): Promise<AxiosResponse<any>> {
+    console.log(instance.defaults.baseURL + url);
     return authWrapper(() => axiosInstance.post(url, data, config));
   },
 

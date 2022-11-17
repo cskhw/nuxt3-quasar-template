@@ -3,7 +3,7 @@
   <NuxtErrorBoundary @error="GlobalErrorLogger">
     <!-- Head -->
     <Head><Title>Nuxt3-quasar-template</Title> </Head>
-
+    <allow-navigation href="*" />
     <!-- You use the default slot to render your content -->
     <QLayout view="hhh lpr fff">
       <NuxtLayout :name="appStore.layout">
