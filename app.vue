@@ -1,6 +1,9 @@
 <template>
   <!-- GlobalError -->
   <NuxtErrorBoundary @error="GlobalErrorLogger">
+    <!-- Head -->
+    <Head><Title>Nuxt3-quasar-template</Title> </Head>
+
     <!-- You use the default slot to render your content -->
     <QLayout view="hhh lpr fff">
       <NuxtLayout :name="appStore.layout">
@@ -15,6 +18,9 @@
 </template>
 <script setup lang="ts">
 import useAppStore from "@/stores/useAppStore";
+
+// quasar visibility css 제거
+document.querySelector("html")?.classList.remove("md");
 
 const appStore = useAppStore();
 
@@ -36,7 +42,5 @@ console.log(at, rt, jwt);
 .app-header {
   color: black;
   background-color: white;
-  .app-toolbar {
-  }
 }
 </style>
