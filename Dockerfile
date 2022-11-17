@@ -3,7 +3,6 @@ FROM node:lts
 WORKDIR /var/www/html/app/
 
 COPY package*.json ./
-
 COPY . .
 
 RUN npm ci && npm cache clean --force
