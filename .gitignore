@@ -4,7 +4,11 @@ node_modules
 .nitro
 .cache
 .output
+<<<<<<< HEAD
 .vscode
+=======
+/android
+>>>>>>> f23d46c63b47e2eb83c609b0dad2804e4c10d8d9
 # .env
 
 # production
@@ -21,7 +25,6 @@ alembic.ini
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-package-lock.json
 
 # env
 .env
